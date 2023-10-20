@@ -1,4 +1,4 @@
-def overlappingSize(img_size, padding, ptch_size, ptch_overlapping):
+def getPaddedImageSizeForInference(img_size, padding, ptch_size, ptch_overlapping):
   """
   Calculate new image size for patched based inference with overlapping patch extraction and stitching
   Formula for patch extraction: (img_size + padding) // wndSize + 1
