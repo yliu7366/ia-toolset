@@ -15,4 +15,4 @@ def getPaddedImageSizeForInference(img_size, padding, ptch_size, ptch_overlappin
     wndSize = ps - po*2
     newSize.append( ((i+p) // wndSize) * wndSize + ps * 2 )
     
-return newSize
+  return newSize
