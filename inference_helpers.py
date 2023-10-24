@@ -31,9 +31,9 @@ def getOverlappingCoordsForInference2D(img_size, wnd_size, ptch_size, offset = [
   coords = []
   for y in range(img_size[0] // wnd_size[0]):
     for x in range(img_size[1] // wnd_size[1]):
-      yy = x * wnd_size[0] + offset[0]
-      xx = y * wnd_size[1] + offset[1]
-      if (yy + ptch_size[0] < img_size[0]) and (xx + ptch_size[1] < img_size[1]):
+      yy = y * wnd_size[0] + offset[0]
+      xx = x * wnd_size[1] + offset[1]
+      if (yy + ptch_size[0]) < img_size[0] and (xx + ptch_size[1]) < img_size[1]:
         coords.append([yy, xx])
 
   return coords
