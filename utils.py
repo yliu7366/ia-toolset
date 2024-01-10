@@ -8,9 +8,7 @@ def byteLiteralList2String(bl):
   :param bl: a list of byte literals
   :return: a string version of the input binary literal list
   """
-  bl_list = []
-  for c in bl:
-    bl_list.append(c.decode())
+  bl_list = [v.decode() for v in bl]
   str = ""
   bl_str = str.join(bl_list)
 
