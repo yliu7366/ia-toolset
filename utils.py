@@ -23,7 +23,7 @@ def normalize2uint8(img, low_high):
   """
   img[img < low_high[0]] = low_high[0]
   img[img > low_high[1]] = low_high[1]
-  img -= low_high
+  img -= low_high[0]
   img /= np.amax(img)
   img *= 255
   return img
