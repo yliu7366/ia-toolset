@@ -13,3 +13,17 @@ def byteLiteralList2String(bl):
   bl_str = str.join(bl_list)
 
   return bl_str
+
+def normalize2uint8(img, low_high):
+  """
+  normalize the input image to be 0..255
+  :param img: input image
+  :param low_high: low and high intensity range
+  :return: normalized image
+  """
+  img[img < low_high[0]] = low_high[0]
+  img[img > low_high[1]] = low_high[1]
+  img -= low_high
+  img /= np.amax(img)
+  img *= 255
+  return img
